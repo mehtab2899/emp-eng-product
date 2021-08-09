@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "start": "node server/server",
+        "server": "nodemon server/server",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "data:import": "node server/seeder",
+        "data:destroy": "node server/seeder -d"
+    },
+    "dependencies": {
+        "concurrently": "^6.2.0",
+        "moment": "^2.29.1"
+    }
+}

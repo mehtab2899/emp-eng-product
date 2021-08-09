@@ -1,0 +1,62 @@
+.dashboard {
+	display: flex;
+	height: 100vh;
+
+	&__main {
+		width: 85%;
+
+		& header {
+			padding: 1.5rem 4rem;
+			background: #1a2238;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		& main {
+			& .feature {
+				margin-top: 5rem;
+
+				&__content {
+					background: #fff;
+					text-align: center;
+					display: grid;
+					grid-gap: 2rem;
+					grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+
+					&--box {
+						width: 25rem;
+						margin: 0 auto;
+						position: relative;
+
+						& .front-face {
+							background: #fff;
+							height: 22rem;
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+
+							& i {
+								font-size: 7rem !important;
+							}
+
+							& span {
+								font-size: 3rem;
+								font-weight: 600;
+								text-transform: uppercase;
+							}
+
+							& i,
+							span {
+								background: linear-gradient(-45deg, #e92d5c, #feae3f);
+								background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

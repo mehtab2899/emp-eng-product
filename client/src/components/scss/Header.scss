@@ -1,0 +1,50 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	font-weight: bold;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	background: #1a2238;
+
+	&__bg {
+		background: #1f2841;
+	}
+
+	&__logo {
+		font-size: 2.5rem;
+
+		& a {
+			text-decoration: none;
+			color: #fff;
+		}
+
+		& span {
+			color: #ff6a3d;
+		}
+	}
+
+	&__nav {
+		color: #fff;
+		cursor: pointer;
+		margin-top: 2rem;
+
+		&--items {
+			display: flex;
+			list-style: none;
+			font-size: 2rem;
+		}
+
+		&--links {
+			text-decoration: none;
+			color: inherit;
+			padding: 0.5rem 2rem;
+
+			&:hover {
+				color: #ff6a3d;
+				transition: all 0.2s ease-out;
+			}
+		}
+	}
+}

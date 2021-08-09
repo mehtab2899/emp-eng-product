@@ -1,0 +1,69 @@
+.home {
+	color: #fff;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #1a2238;
+	clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+
+	&__content {
+		text-align: center;
+		display: flex-inline;
+
+		& h1 {
+			font-size: 5rem;
+			margin: 0 0 5rem;
+
+			& .word1 {
+				color: #9daaf2;
+			}
+
+			& .word2 {
+				padding-bottom: 0.4rem;
+				color: #ff6a3d;
+				background: url("../../squiggle-h3.png");
+				background-size: auto 9px;
+				background-position: left bottom;
+				background-repeat: repeat-x;
+				backface-visibility: hidden;
+				animation: move 10s linear infinite paused;
+
+				&:hover {
+					cursor: pointer;
+					color: #d45028;
+					animation-play-state: running !important;
+				}
+			}
+		}
+	}
+
+	& a {
+		padding: 1.5rem 2rem;
+		font-size: 2rem;
+		border-radius: 25px;
+		border: none;
+		cursor: pointer;
+		background: #fff;
+		text-transform: uppercase;
+		color: #ff6a3d;
+		transition: all 0.3s;
+		text-decoration: none;
+
+		&:hover {
+			background: #ff6a3d;
+			color: #fff;
+		}
+	}
+}
+
+// animations
+@keyframes move {
+	0% {
+		background-position: 2px bottom;
+	}
+	100% {
+		background-position: 500px bottom;
+	}
+}

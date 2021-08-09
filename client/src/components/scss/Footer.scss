@@ -1,0 +1,30 @@
+.footer {
+	padding: 2rem 0;
+	text-align: center;
+	background: #1f2841;
+
+	& h1 {
+		color: #ff6a3d;
+		font-weight: bold;
+		font-size: 3rem;
+		line-height: 1.5;
+	}
+
+	& h2 {
+		color: #fff;
+		font-size: 2rem;
+	}
+
+	& p {
+		padding-top: 1rem;
+		font-size: 2rem;
+		color: #fff;
+
+		& img {
+			margin: 0 1rem;
+			width: 3rem;
+			position: relative;
+			top: 0.6rem;
+		}
+	}
+}

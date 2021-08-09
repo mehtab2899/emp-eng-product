@@ -1,0 +1,71 @@
+@import "./mixins/mixins.scss";
+
+.about {
+	margin: 5rem;
+
+	& h1 {
+		@include heading;
+	}
+
+	&__content {
+		margin: 10rem 0;
+		display: flex;
+		color: #1f2841;
+
+		&--left {
+			max-width: 50%;
+
+			& h2 {
+				padding: 0 0 1.5rem;
+				font-size: 2rem;
+
+				& span {
+					color: #ff6a3d;
+				}
+			}
+
+			& p {
+				font-size: 1.7rem;
+				padding-bottom: 3rem;
+			}
+		}
+
+		&--right {
+			width: 50%;
+			position: relative;
+
+			& img {
+				width: 30rem;
+				box-shadow: 0 1.5rem 4rem rgba(#000, 0.4);
+				position: absolute;
+				z-index: 10;
+				outline-offset: 1.2rem;
+				transition: all 0.3s;
+
+				&:hover {
+					transform: scale(1.05) translateY(-0.5rem);
+					box-shadow: 0 2.5rem 4rem rgba(#ff6a3d, 0.5);
+					z-index: 20;
+					outline: 1rem solid #ff6a3d;
+				}
+			}
+
+			& .i1 {
+				left: 3rem;
+				top: -2rem;
+			}
+
+			& .i2 {
+				top: 2rem;
+				right: 1rem;
+			}
+
+			& .i3 {
+				position: absolute;
+
+				top: 10rem;
+				left: 20%;
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+@import "./mixins/mixins.scss";
+
+.pricing {
+	padding: 8rem 0;
+
+	& h1 {
+		@include heading;
+	}
+
+	&__content {
+		padding-top: 5rem;
+		display: flex;
+		justify-content: space-between;
+
+		&--card {
+			text-align: center;
+			position: relative;
+			width: 25%;
+			height: auto;
+			background: linear-gradient(-45deg, #fe0847, #feae3f);
+			border-radius: 15px;
+			margin: 0 auto;
+			padding: 2rem 2rem;
+			-webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+
+			& .title {
+				& .fa {
+					color: #fff;
+					font-size: 2rem;
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					text-align: center;
+					line-height: 50px;
+					-webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+				}
+				& h2 {
+					color: #fff;
+					font-size: 2.5rem;
+					padding-top: 0.5rem;
+					z-index: 2;
+				}
+			}
+
+			& .price {
+				& h4 {
+					margin: 0;
+					padding: 1rem 0;
+					color: #fff;
+					font-size: 60px;
+				}
+			}
+
+			& .option {
+				& ul li {
+					margin: 0 0 10px;
+					list-style: none;
+					color: #fff;
+					font-size: 16px;
+				}
+			}
+
+			& a {
+				position: relative;
+				z-index: 2;
+				background: #fff;
+				color: black;
+				width: 150px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 40px;
+				display: block;
+				text-align: center;
+				margin: 20px auto 0;
+				font-size: 16px;
+				cursor: pointer;
+				-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+				text-decoration: none;
+
+				&:hover {
+					background: linear-gradient(-45deg, #fe0847, #feae3f);
+					color: #fff;
+				}
+			}
+		}
+	}
+}

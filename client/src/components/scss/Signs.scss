@@ -1,0 +1,28 @@
+.signs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 12.34rem 0;
+
+	&__btns {
+		margin: 5rem;
+
+		&--links {
+			margin: 2rem;
+			padding: 1.5rem 2rem;
+			border-radius: 0 15px;
+			cursor: pointer;
+			transition: all 0.3s;
+			background: #eee;
+			font-size: 2rem;
+			text-decoration: none;
+			color: #000;
+
+			&:hover {
+				background: linear-gradient(-45deg, #fe0847, #feae3f);
+				color: #000;
+			}
+		}
+	}
+}
