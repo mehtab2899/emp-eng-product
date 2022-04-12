@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import queryString from "query-string";
@@ -7,7 +6,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 import io from "socket.io-client";
 import moment from "moment";
 import EmpAside from "../../EmpAside";
-import AdminAside from "../../AdminAside";
+// import AdminAside from "../../AdminAside";
 
 let socket;
 
@@ -58,9 +57,6 @@ const Chat = ({ location }) => {
         <div className="chat-container">
           <header className="chat-header">
             <h1>ChatCord</h1>
-            <Link to="/employee-dashboard" className="btn">
-              Leave Chat
-            </Link>
           </header>
           <main className="chat-main">
             <div className="chat-sidebar">

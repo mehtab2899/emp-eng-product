@@ -1,35 +1,35 @@
 .admin {
-	width: 60rem;
-	margin: 2rem auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 2rem 5rem;
-	border: none;
-	box-shadow: 0 1px 5px 0px rgb(238, 186, 168);
-	border-radius: 5px;
+  width: 60rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  border: none;
+  box-shadow: 0 1px 5px 0px rgb(238, 186, 168);
+  border-radius: 5px;
 
-	&__btns {
-		& button {
-			margin: 1rem;
-			padding: 1rem 2rem;
-			border-radius: 0 15px;
-			border: none;
-			cursor: pointer;
-		}
-	}
+  &__btns {
+    & button {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 0 15px;
+      border: none;
+      cursor: pointer;
+    }
+  }
 
-	&__forms {
-		margin-top: 2rem;
-	}
+  &__forms {
+    margin-top: 2rem;
+  }
 }
 
 // hooks classes
 .h1 {
-	background: orangered !important;
+  background: orangered !important;
 }
 
 .h2 {
-	background: lightgray;
+  background: lightgray;
 }

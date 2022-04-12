@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AOS from "aos";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -34,6 +34,18 @@ import Chat from "./components/screens/EmployeeScreen/Chat";
 AOS.init();
 
 const App = () => {
+  const [newUserInfo, setNewUserInfo] = useState({
+    profileImages: [],
+  });
+
+  const updateUploadedFiles = (files) =>
+    setNewUserInfo({ ...newUserInfo, profileImages: files });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //logic to create new user...
+  };
+
   return (
     <>
       {/* routings */}
@@ -44,7 +56,6 @@ const App = () => {
         <Route exact path="/employee" component={EmpLoginScreen} />
         <Route exact path="/forgot" component={ForgetPW} />
         <Route exact path="/chat" component={Chat} />
-
         {/* Admin Dashboard & Features Start */}
         <Route exact path="/admin-dashboard" component={AdminDashScreen} />
         <Route exact path="/admin-meeting" component={AdminMeet} />
@@ -52,9 +63,17 @@ const App = () => {
         <Route exact path="/admin-project" component={AdminProject} />
         <Route exact path="/admin-gmail" component={AdminGmail} />
         <Route exact path="/admin-tracking" component={AdminTracking} />
-        <Route exact path="/admin-docs" component={AdminDocs} />
+        <Route exact path="/admin-docs">
+          <form onSubmit={handleSubmit}>
+            <EmpDocs
+              accept=".jpg,.png,.jpeg"
+              label="Profile Image(s)"
+              multiple
+              updateFilesCb={updateUploadedFiles}
+            />
+          </form>
+        </Route>{" "}
         {/* Admin Dashboard & Features End */}
-
         {/* Employee Dashboard & Features Start */}
         <Route exact path="/employee-dashboard" component={EmpDashScreen} />
         <Route exact path="/employee-meeting" component={EmpMeet} />
@@ -62,7 +81,16 @@ const App = () => {
         <Route exact path="/employee-project" component={EmpProject} />
         <Route exact path="/employee-gmail" component={EmpGmail} />
         <Route exact path="/employee-tracking" component={EmpTracking} />
-        <Route exact path="/employee-docs" component={EmpDocs} />
+        <Route exact path="/employee-docs">
+          <form onSubmit={handleSubmit}>
+            <EmpDocs
+              accept=".jpg,.png,.jpeg"
+              label="Profile Image(s)"
+              multiple
+              updateFilesCb={updateUploadedFiles}
+            />
+          </form>
+        </Route>
         {/* Employee Dashboard & Features End */}
       </Router>
     </>

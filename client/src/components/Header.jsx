@@ -34,9 +34,9 @@ const Header = () => {
           {NavItems.map((item, index) => {
             return (
               <li key={index}>
-                <NavLink className={item.cName} to={item.url}>
+                <a className={item.cName} href={item.url}>
                   {item.title}
-                </NavLink>
+                </a>
               </li>
             );
           })}
